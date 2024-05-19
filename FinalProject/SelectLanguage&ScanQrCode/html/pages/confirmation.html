@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interact with Pepper</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/w3.css">
+        <link rel="stylesheet" type="text/css" href="../css/formatting.css">
+        <link rel="stylesheet" href="../css/all.css">
+
+        <script src="/libs/qi/2/qi.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/qievents.js"></script>
+        <script src="../js/displayinfo.js"></script>
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+               
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="w3-content" style="max-width:1100px">
+            <!-- Tip Section -->
+            <div class="w3-row w3-padding-64" id="riddle">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img id="pageImage" src="../pics/useklogo2.png" class="w3-round w3-image" alt="Pepper Pic" width="450" height="600">
+                </div>
+
+                <div class="w3-col m6 w3-padding-large">
+                    <div id="informationSection" class="w3-center">
+                   
+                        <hr />
+                        <h1 style="color: red;">WELCOME</h1>
+
+                  </br> <h1 style="color: blue;">BIENVENUE</h1>
+                        
+                        <hr />
+                      
+                <h3 style="color: red;">Select a language</h3>
+                </br> <h3 style="color: blue;">Sélectionnez une langue</h3>
+                    </div>
+                    <hr />
+                    <div class="w3-center">
+                        <button type="button" id="noButton" onclick="raiseConfirmationEvent('frenchAnswer')" class="fa rate-button rounded-rect-btn blue-btn" style="font-size:40px;margin-right: 50pt;">
+                            
+                            <img src="../pics/french_flag.png" alt="french description" width="100" height="50">
+                       </button> 
+                        <button type="button" id="yesButton" onclick="raiseConfirmationEvent('englishAnswer')" class="fa rate-button rounded-rect-btn red-btn" style="font-size:40px;">
+                            
+                            <img src="../pics/English_Flag.jpg" alt="english description" width="100" height="50">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <!-- Footer -->
+        <footer class="w3-center w3-light-grey w3-padding-32">
+            <p>Powered by <a href="https://www.softbankrobotics.com/emea/en" title="PEPPER" target="_blank" class="w3-hover-text-green">PEPPER</a></p>
+        </footer>
+    </body>
+    <script type="text/javascript">
+        displayPageInformation();
+    </script>
+</html>
+

@@ -1,0 +1,21 @@
+topic: ~confirmation()
+language: enu
+include: lexicon_enu.top
+
+proposal: %englishProposal ~joyful you selected english Language $englishOutput=1 great $english=1 $onStopped=1
+proposal: %frenchProposal ~neutral You selected french language \pau=200\ I don't actually know how to speak french 
+
+u:(english) ^gotoReactivate(englishProposal)
+u:(french) ^gotoReactivate(frenchProposal)
+
+u:(e:englishAnswer) ^gotoReactivate(englishProposal)
+u:(e:frenchAnswer) ^gotoReactivate(frenchProposal)
+
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello

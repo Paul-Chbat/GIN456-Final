@@ -1,0 +1,11 @@
+topic: ~start()
+language: enu
+
+concept: (greetings) [Hello Hi Greetings "Good evening"]
+concept: (approval)  [yes sure "why not" absolutely]
+concept: (denial)    [no "another time"]
+
+proposal: %rules Okay, we will move on to the rules, say next after each rule to move on. \pau=200\ $rule1=1 $onStopped=1
+
+u: (e:onStart)  \pau=200\ Now are you ready to hear the rules?
+    u1: (~approval) ^gotoReactivate(rules)

@@ -1,0 +1,17 @@
+topic: ~direct()
+language: enu
+
+proposal: %question In which region will you be seated?
+    u1:(A) $zoneA=1 ^gotoReactivate(speak) 
+    u1:(B) $zoneB=1 ^gotoReactivate(speak) 
+    u1:(C) $zoneC=1 ^gotoReactivate(speak) 
+    u1:(D) $zoneD=1 ^gotoReactivate(speak)
+
+proposal: %speak Now please choose any empty seat within your designated zone. \pau=2000\ $onStopped=1 
+
+u:(e:onStart) Now let me direct you to your seat. \pau=250\ ^gotoReactivate(question)
+
+u:(e:chooseA) $zoneA=1 ^gotoReactivate(speak) 
+u:(e:chooseB) $zoneB=1 ^gotoReactivate(speak)
+u:(e:chooseC) $zoneC=1 ^gotoReactivate(speak)
+u:(e:chooseD) $zoneD=1 ^gotoReactivate(speak)

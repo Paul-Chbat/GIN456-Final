@@ -1,0 +1,15 @@
+topic: ~directGuest()
+language: enu
+
+proposal: %question In which region will you be seated?
+    u1:(A) $zoneNb="1" ^gotoReactivate(speak) 
+    u1:(B) $zoneNb="2" ^gotoReactivate(speak) 
+    u1:(C) $zoneNb="3" ^gotoReactivate(speak) 
+    u1:(D) $zoneNb="4" ^gotoReactivate(speak)
+
+proposal: %speak Now you can zoom in using the tablet to choose any seat, say or press continue to move forward.
+    u1:(continue) $onStopped=1
+
+u:(e:onStart) Now let me direct you to your seat. \pau=250\ ^gotoReactivate(question)
+u:(e:continueButton) $onStopped=1
+u:(e:choose) $zoneNb=$choose ^gotoReactivate(speak) 

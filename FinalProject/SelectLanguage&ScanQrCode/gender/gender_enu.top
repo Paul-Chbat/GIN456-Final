@@ -1,0 +1,16 @@
+topic: ~gender()
+language: enu
+
+concept: (approval)  [yes sure "why not" absolutely]
+concept: (denial)    [no "another time"]
+
+
+proposal: %male Ok i am Mister pepper $maleoutput=1
+proposal: %female Ok i am Miss Pepper $femaleoutput=1
+
+u:(e:onStart) Now choose my gender 
+    u1:(male) ^gotoReactivate(male)
+    u1:(female) ^gotoReactivate(female)
+    
+u:(e:maleB) ^gotoReactivate(male)
+u:(e:femaleB) ^gotoReactivate(female)

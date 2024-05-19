@@ -1,0 +1,16 @@
+topic: ~rule2()
+language: enu
+
+proposal: %rule2prop  Avoid throwing trash on the floor, and no food is allowed in the ceremony room.\pau=1000\
+    u1:(next) ^gotoReactivate(info)
+
+proposal: %info $info=1 \pau=250\ Before moving on to more serious stuff, \pau=100\
+          Can you guess how many students are graduating this year? Choose an option.
+          
+proposal: %end Great, now don't forget to follow the rules, \pau=250\ now we will move on to scanning your qr code.
+     $scanqr=1 $onStopped=1
+
+u:(e:incorrectButton) Incorrect, 1200 students are graduating this year. \pau=250\ ^gotoReactivate(end)
+u:(e:correctButton) Correct \pau=250\ ^gotoReactivate(end)
+u:(e:onStart) Rule 2 \pau=250\ ^gotoReactivate(rule2prop)
+u:(e:rule2next) ^gotoReactivate(info)

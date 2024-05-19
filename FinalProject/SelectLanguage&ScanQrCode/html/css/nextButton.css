@@ -1,0 +1,42 @@
+#next , #yesButton , #noButton , #femaleButton , #maleButton{
+    color:black;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#next:hover{
+    color:white;
+    background-color: navy;
+}
+
+#maleButton {
+    color:white;
+    background-color: rgb(0, 81, 128);
+}
+
+#femaleButton {
+    color:white;
+    background-color: rgb(128, 0, 96);
+}
+
+#yesButton:hover{
+    color:white;
+    background-color: rgb(0, 128, 11);
+}
+
+#noButton:hover{
+    color:white;
+    background-color: rgb(128, 0, 0);
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+}
+
+.button-row button {
+    margin: 5px;
+}

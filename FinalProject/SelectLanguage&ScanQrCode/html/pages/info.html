@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interact with Pepper</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/w3.css">
+        <link rel="stylesheet" type="text/css" href="../css/formatting.css">
+        <link rel="stylesheet" href="../css/all.css">
+        <link rel="stylesheet" href="../css/nextButton.css">
+
+        <script src="/libs/qi/2/qi.js"></script>
+        <script src="../js/jquery.js"></script>
+        <script src="../js/qievents.js"></script>
+        <script src="../js/displayinfo.js"></script>
+    </head>
+
+    <body>
+        <div class="w3-content" style="max-width:1100px">
+            <div class="w3-row w3-padding-64">
+                <div class="w3-col m6 w3-padding-large">
+                    <div id="informationSection" class="w3-center">
+                        <h2 id="pageText"></h2>
+                        <hr />
+                    </div>
+                    <div class="w3-center">
+                        <div class="button-row">
+                            <button type="button" id="yesButton" onclick="raiseConfirmationEvent('correctButton')" class="fa rate-button rounded-rect-btn green-btn" style="font-size:40px;">
+                                <span class="default-font">1200</span><br>
+                            </button>
+                            <button type="button" id="noButton" onclick="raiseConfirmationEvent('incorrectButton')" class="fa rate-button rounded-rect-btn green-btn" style="font-size:40px;">
+                                <span class="default-font">1300</span><br>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="w3-center">
+                        <div class="button-row">
+                            <button type="button" id="noButton" onclick="raiseConfirmationEvent('incorrectButton')" class="fa rate-button rounded-rect-btn green-btn" style="font-size:40px;">
+                                <span class="default-font">1500</span><br>
+                            </button>
+                            <button type="button" id="noButton" onclick="raiseConfirmationEvent('incorrectButton')" class="fa rate-button rounded-rect-btn green-btn" style="font-size:40px;">
+                                <span class="default-font">1000</span><br>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img id="pageImage" class="w3-round w3-image" alt="Pepper Pic" width="600" height="650">
+                </div>
+            </div>
+            <hr />
+        </div>
+    </body>
+    <script type="text/javascript">
+        displayTextImageInformation();
+    </script>
+</html>

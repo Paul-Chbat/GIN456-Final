@@ -1,0 +1,8 @@
+topic: ~rule1()
+language: enu
+
+proposal: %rule1prop  Stay respectful to other guests attending this ceremony, and avoid shouting while the ceremony is                                     underway.\pau=1000\
+    u1:(next) $rule2=1 $onStopped=1
+    
+u:(e:onStart) Rule 1 \pau=250\ ^gotoReactivate(rule1prop)
+u:(e:rule1next) $rule2=1 $onStopped=1

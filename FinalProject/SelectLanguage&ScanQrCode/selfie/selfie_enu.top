@@ -1,0 +1,27 @@
+topic: ~selfie()
+language: enu
+
+concept: (approval)  [yes sure "why not" absolutely]
+concept: (denial)    [no "another time"]
+
+#selfie
+proposal: %noselfie Have a great ceremony \pau=500\ $onStopped=1
+
+u:(e:onStart) Before proceeding to the ceremony, do you want to take a selfie with me?
+    u1:(~approval) Great $choosegender=1  ^gotoReactivate(gender)
+    u1:(~denial) Too bad ^gotoReactivate(noselfie)
+u:(e:yselfie) Great $choosegender=1 ^gotoReactivate(gender)
+u:(e:nselfie) Too bad ^gotoReactivate(noselfie)
+
+
+#gender    
+proposal: %gender \pau=200\ Now choose my gender
+    u1:(male) ^gotoReactivate(male)
+    u1:(female) ^gotoReactivate(female)
+    
+proposal: %male $maleoutput=1 Ok i will count down, 3 \pau=500\ 2 \pau=500\ 1 \pau=500\ $picsound=1
+proposal: %female $femaleoutput=1 Ok i will count down, 3 \pau=500\ 2 \pau=500\ 1 \pau=500\ $picsound=1
+    
+#button inputs
+u:(e:maleB) ^gotoReactivate(male)
+u:(e:femaleB) ^gotoReactivate(female)

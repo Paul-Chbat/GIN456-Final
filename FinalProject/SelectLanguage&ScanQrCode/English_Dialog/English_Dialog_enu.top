@@ -1,0 +1,16 @@
+topic: ~English_Dialog()
+language: enu
+
+proposal: \rspd=85\What is your name \pau=500\?
+       u1:(_[elio anthony maria paul Georges]) Welcome $1 $name=$1 \pau=500\ ^nextProposal
+proposal: \rspd=85\ what is the relationship between you and the graduating student?
+        u1: (*) \rspd=90\ Great $name \pau=500\Most Welcome \pau=500\ ^nextProposal 
+proposal: \rspd=85\What are you most looking forward to about today's ceremony?
+        u1:(*) \rspd=90\ Wow \pau=500\That's wonderful\pau=500\ ^nextProposal
+proposal: \rspd=85\ Is this the first time you visit USEK?
+        u1:(Yes) \rspd=90\ Ok Great $name \pau=500\ ^nextProposal 
+        u1:(No) \rspd=90\ Most Welcome $name \pau=500\ ^nextProposal
+proposal: \rspd=85\ Thank you \pau=100\ for joining us today. \pau=500\ $onScanQR1=1 $onPictureLabel=1
+
+#u:(hello) \rspd=85\ Hello , Now I want to take some information \pau=500\^nextProposal
+u:(e:onStart) \rspd=85\ Hello , Now I want to take some information \pau=500\^nextProposal

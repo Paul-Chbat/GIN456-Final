@@ -1,0 +1,10 @@
+topic: ~QrDialog()
+language: enu
+
+proposal: %Scan1 $showImage=maria.jpg welcome to the graduation \pau=2500\ $direct=1
+proposal: %Scan2 $showImage=elio.jpg welcome to the graduation \pau=2500\ $direct=1
+proposal: %Scan3 $showImage=anthony.jpg welcome to the graduation \pau=2500\ $direct=1
+proposal: %Scan4 $showImage=paul.jpg welcome to the graduation \pau=2500\ $direct=1
+proposal: %Scan5 $showImage=georges.jpg welcome to the graduation \pau=2500\ $direct=1
+
+u:(e:PictureLabel) ^gotoReactivate($PictureLabel)
